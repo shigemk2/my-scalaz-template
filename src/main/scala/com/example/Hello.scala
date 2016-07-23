@@ -1,6 +1,7 @@
 package com.example
 
 import scalaz._
+import Scalaz._
 import std.option._, std.list._
 import std.list._
 import syntax.bind._
@@ -12,6 +13,7 @@ object Hello {
     println(List(List(1)).join)
     println(List(true, false).ifM(List(0, 1), List(2, 3)))
     println(List(true, true).ifM(List(0, 1), List(2, 3)))
+    println(NonEmptyList(1, 2, 3).cojoin)
     println("Hello, world!")
   }
 }
